@@ -1,11 +1,8 @@
-package behavioral.observer;
-
-import java.util.Scanner;
+package behavioral.observer.counter;
 
 public class CounterDemo {
     public static void main(String[] args) {
         Thread counterThread;
-
         counterThread = new Thread(() -> {
             for (int i = 0; ; i++) {
                 try {
@@ -14,12 +11,11 @@ public class CounterDemo {
                     e.printStackTrace();
                 }
                 System.out.println(i + 1);
+
             }
         });
         counterThread.start();
 
-        while (true) {
-            System.out.println(new Scanner(System.in).nextLine());
-        }
     }
 }
+

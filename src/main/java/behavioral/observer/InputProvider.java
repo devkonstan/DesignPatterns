@@ -31,7 +31,7 @@ public class InputProvider implements InterfaceInputProvider { //jest obserwowan
 
     @Override
     public void notifyAllObservers() {
-        observers.forEach(observer->observer.update());
+        observers.forEach(observer -> observer.update());
 //        for (InterfaceMyTimer observer : observers) {
 //            observer.update();
 //        }
