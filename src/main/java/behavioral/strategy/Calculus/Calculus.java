@@ -1,9 +1,12 @@
 package behavioral.strategy.Calculus;
 
-//klasa kontekstowa
+import java.util.Random;
+
+//klasa kontekstowa (klient)
 public class Calculus {
+    //elementy kompozycji
     private int currentNumber;
-    private Aggregator aggregator; //element kompozycji
+    private Aggregator aggregator;
 
     public Calculus(Aggregator aggregator) {
         this.aggregator = aggregator;
@@ -24,4 +27,5 @@ public class Calculus {
     public int getCurrentNumber() {
         return currentNumber;
     }
+
 }

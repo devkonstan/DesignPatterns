@@ -1,8 +1,8 @@
 package structural.adapter.animal;
 
 public class MechanicalAnimalAdapter implements IAnimal {
-
-    private final IMechanicalAnimal adaptedMechanicalAnimal; //zaleznosc klasy
+    //zaleznosc klasy
+    private final IMechanicalAnimal adaptedMechanicalAnimal;
 
     public MechanicalAnimalAdapter(IMechanicalAnimal adaptedMechanicalAnimal) {
         this.adaptedMechanicalAnimal = adaptedMechanicalAnimal;
@@ -10,6 +10,7 @@ public class MechanicalAnimalAdapter implements IAnimal {
 
     @Override
     public void makeSound() {
+
         adaptedMechanicalAnimal.doMechanicalSound();
     }
 }

@@ -1,4 +1,4 @@
-package structural.adapter.duck;
+package behavioral.strategy.duck;
 
 //to jest superklasa nadrzedna
 public abstract class Kaczka {

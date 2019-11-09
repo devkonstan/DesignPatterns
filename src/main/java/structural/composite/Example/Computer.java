@@ -9,22 +9,21 @@ public class Computer {
         keyboard.addChild(alfaKeyboard);
         keyboard.addChild(new ComputerSubassembly("Klawiatura numeryczna"));
         main.addChild(keyboard);
-        /*        Example.Subassembly system_unit = new Example.CompositeSubassembly("Jednostka Centralna");
-                system_unit.addFile(new Example.ComputerSubassembly("Napęd DVD"));
-        system_unit.addFile(new Example.ComputerSubassembly("Diody sygnalizacyjne"));
-        Example.Subassembly processor = new Example.CompositeSubassembly("Procesor");
-        Example.Subassembly registers = new Example.CompositeSubassembly("Rejestry");
-        registers.addFile(new Example.ComputerSubassembly("Przerzutnik"));
-        processor.addFile(registers);
-        processor.addFile(new Example.ComputerSubassembly("ALU"));
-        system_unit.addFile(new Example.ComputerSubassembly("Dysk twardy"));
-        system_unit.addFile(new Example.ComputerSubassembly("Karta Graficzna"));
-        system_unit.addFile(new Example.ComputerSubassembly("Pamięć"));
-        system_unit.addFile(processor);
-        main.addFile(keyboard);
-        main.addFile(new Example.ComputerSubassembly("Monitor"));
-        main.addFile(new Example.ComputerSubassembly("Mysz"));
-        main.addFile(system_unit);*/
+        Subassembly system_unit = new CompositeSubassembly("Jednostka Centralna");
+        system_unit.addChild(new ComputerSubassembly("Napęd DVD"));
+        system_unit.addChild(new ComputerSubassembly("Diody sygnalizacyjne"));
+        Subassembly processor = new CompositeSubassembly("Procesor");
+        system_unit.addChild(processor);
+        Subassembly registers = new CompositeSubassembly("Rejestry");
+        registers.addChild(new ComputerSubassembly("Przerzutnik"));
+        processor.addChild(registers);
+        processor.addChild(new ComputerSubassembly("ALU"));
+        system_unit.addChild(new ComputerSubassembly("Dysk twardy"));
+        system_unit.addChild(new ComputerSubassembly("Karta Graficzna"));
+        system_unit.addChild(new ComputerSubassembly("Pamięć"));
+        main.addChild(new ComputerSubassembly("Monitor"));
+        main.addChild(new ComputerSubassembly("Mysz"));
+        main.addChild(system_unit);
         main.showMe();
     }
 }

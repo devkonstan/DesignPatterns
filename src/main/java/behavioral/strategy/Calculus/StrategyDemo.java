@@ -13,7 +13,6 @@ public class StrategyDemo {
     }
 
     private static void doIt(Calculus calculus) {
-        Random random = new Random();
         for(int i = 0; i < 10; i++) {
             calculus.execute(1);
             System.out.println("Current: " + calculus.getCurrentNumber());

@@ -1,5 +1,6 @@
 package behavioral.strategy.Controller;
 
+//klasa kontekstowa (klient)
 public class Robot {
     private Position currentPosition;
     private IController controller;
@@ -12,13 +13,16 @@ public class Robot {
     public Robot(Keyboard keyboard) {
     }
 
+    public Robot(Gamepad gamepad) {
+    }
+
     public void updatePosition(Position position) {
         currentPosition = position;
     }
 
+    //logika sterowania robotem
     public void move() {
         ControllerData controllerData = controller.readControllerData();
-        //logika sterowania robotem
     }
 
     public void changeController(IController newController) {

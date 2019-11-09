@@ -13,11 +13,11 @@ public class ComputerSubassembly extends Subassembly {
 
     @Override
     public void addChild(Subassembly p) {
-        throw new UnsupportedOperationException("not supported by Example.ComputerSubassembly!");
+        throw new UnsupportedOperationException("not supported by ComputerSubassembly!");
     }
 
     @Override
     public void removeChild(Subassembly p) {
-        throw new UnsupportedOperationException("not supported by Example.ComputerSubassembly!");
+        throw new UnsupportedOperationException("not supported by ComputerSubassembly!");
     }
 }

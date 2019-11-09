@@ -1,4 +1,4 @@
-package behavioral.observer.counter;
+package sandbox.counter;
 
 import java.util.Random;
 import java.util.Scanner;

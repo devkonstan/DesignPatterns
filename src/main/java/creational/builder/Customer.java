@@ -18,6 +18,12 @@ public class Customer {
     }
 
     private Customer(String name, String lastName) {
+        this.name = name;
+        this.lastName = lastName;
+    }
+
+    public static Customer createWithDefaults() {
+        return new Customer("Frank", "Nash");
     }
 
     public Customer(String name, String lastName, LocalDate birthDate, String pesel, String profession, String city, String country) {
@@ -29,17 +35,6 @@ public class Customer {
         this.city = city;
         this.country = country;
     }
-
-    public static Customer createWithDefaults() {
-        return new Customer("Frank", "Nash");
-    }
-
-
-    public static BuilderNew createCustom(String name, String lastName) {
-
-        return new BuilderNew();
-    }
-
 
     public String getName() {
         return name;
@@ -85,7 +80,8 @@ public class Customer {
 
     public static class Builder {
         private Customer customer;
-        //parametry wymagane mozemy wsadzic w konstruktor (name,lastName)
+
+        //parametry wymagane mozemy wsadzic w konstruktor (name, lastName)
         public Builder(String name, String lastName) {
 
             customer = new Customer(name, lastName);
@@ -120,7 +116,6 @@ public class Customer {
             customer.country = country;
         }
 
-
         public Customer build() {
             return customer;
         }
@@ -147,8 +142,12 @@ public class Customer {
         }
 
         public BuilderNew withPesel(String pesel) {
-            Regex regex = new Regex("\\d{11}");
-            customer.pesel = pesel;
+            if (pesel.length() != 11) {
+                pesel = "not valid";
+                customer.pesel = pesel;
+            } else {
+                customer.pesel = pesel;
+            }
             return this;
         }
 
@@ -173,6 +172,11 @@ public class Customer {
         }
 
 
+    }
+
+    public static BuilderNew createCustom(String name, String lastName) {
+
+        return new BuilderNew();
     }
 
 }

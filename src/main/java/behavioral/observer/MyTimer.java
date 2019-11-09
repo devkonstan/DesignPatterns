@@ -1,6 +1,6 @@
 package behavioral.observer;
-
-public class MyTimer implements InterfaceMyTimer { //obserwuje OBSERWATOR
+//obserwuje -> OBSERWATOR
+public class MyTimer implements InterfaceMyTimer {
     protected InputProvider subject;
     private boolean running;
     private Thread countingThread;
@@ -34,6 +34,11 @@ public class MyTimer implements InterfaceMyTimer { //obserwuje OBSERWATOR
 
     @Override
     public void update() {
+        running = false;
+    }
+
+    @Override
+    public void exitRequested() {
         running = false;
     }
 }

@@ -1,6 +1,7 @@
 package behavioral.observer;
+//interfejs obserwatora
+public interface InterfaceMyTimer {
 
-public interface InterfaceMyTimer { //interfejs obserwatora
-
-    void update(); //exitRequested() -> obsluguje koniec dzialania programu
+    void update();
+    void exitRequested(); //obsluguje koniec dzialania programu
 }

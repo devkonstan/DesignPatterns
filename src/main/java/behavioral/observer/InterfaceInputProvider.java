@@ -1,8 +1,8 @@
 package behavioral.observer;
+//interfejs obserwowanego
+public interface InterfaceInputProvider {
 
-public interface InterfaceInputProvider { //interfejs obserwowanego
-
-    void subscribe(InterfaceMyTimer observer); //interfejs! a nie konkretna implementacja
+    void subscribe(InterfaceMyTimer observer);
     void unsubscribe(InterfaceMyTimer observer);
     void notifyAllObservers();
 

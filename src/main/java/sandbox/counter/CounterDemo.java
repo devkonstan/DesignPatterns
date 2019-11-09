@@ -1,4 +1,4 @@
-package behavioral.observer.counter;
+package sandbox.counter;
 
 public class CounterDemo {
     public static void main(String[] args) {

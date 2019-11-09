@@ -1,6 +1,6 @@
 package structural.adapter.animal;
 
-public class AnimalPlanet {
+public class AnimalAdapter {
     public void makeSound(IAnimal animal) {
 
         animal.makeSound();

@@ -1,4 +1,4 @@
-package structural.adapter.duck;
+package behavioral.strategy.duck;
 
 public class DzikaKaczka extends Kaczka {
 

@@ -9,6 +9,8 @@ public class Application {
                 .setB(2)
                 .setC(3);
 
+        System.out.println(fb);
+
         User someone = new User.BobTheBuilder()
                 .setName("Jan")
                 .setAge(24)
@@ -26,7 +28,7 @@ public class Application {
         Customer customer2 = new Customer.BuilderNew()
                 .setName("John")
                 .setLastName("Smith")
-                .withPesel("32324")
+                .withPesel("32324678901")
                 .livesIn("Los Angeles")
                 .bornAt(LocalDate.of(1984, 12, 10))
                 .build();

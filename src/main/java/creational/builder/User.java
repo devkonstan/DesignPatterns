@@ -9,7 +9,7 @@ public class User {
     }
     // FluentBuilder
     public static class BobTheBuilder { //ta klasa jest wewnatrzna i ma dostep do klasy User
-        private User user = new User(); //klasa wewnetrzna ma dostep do klasy tworzone -> User
+        private User user = new User();
 
         public BobTheBuilder setName(String name) {
             user.name = name;

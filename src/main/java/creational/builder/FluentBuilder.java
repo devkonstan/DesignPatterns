@@ -36,4 +36,11 @@ public class FluentBuilder {
         return this;
     }
 
+    @Override
+    public String toString() {
+        return "FluentBuilder{" +
+                "b=" + b +
+                ", c=" + c +
+                '}';
+    }
 }
